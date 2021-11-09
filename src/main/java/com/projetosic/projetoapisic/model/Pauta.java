@@ -1,25 +1,21 @@
 package com.projetosic.projetoapisic.model;
 
-@Entit
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Data
+
+@Entity
+@Table(name="pauta")
+
 public class Pauta {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name="Id")
     private int Id;
+
+    @Column(name="Nome")
     private String Nome;
-
-    //Get e Set
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        this.Id = id;
-    }
-
-    public String getNome() {
-        return Nome;
-    }
-
-    public void setNome(String nome) {
-        this.Nome = nome;
-    }
 }
