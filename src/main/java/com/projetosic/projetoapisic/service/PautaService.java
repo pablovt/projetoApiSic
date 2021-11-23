@@ -16,4 +16,12 @@ public class PautaService {
     public List<Pauta> listaPauta(){
         return pautaRepository.findAll();
     }
+
+    public Pauta salvarPauta(Pauta pauta){
+        return pautaRepository.save(pauta);
+    }
+
+    public Pauta listarPautaId(Integer id){
+        return pautaRepository.getById(id);
+    }
 }
