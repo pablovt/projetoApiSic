@@ -22,6 +22,6 @@ public class PautaService {
     }
 
     public Pauta listarPautaId(Integer id){
-        return pautaRepository.getById(id);
+        return pautaRepository.findById(id).get();
     }
 }
